@@ -1,2 +1,5 @@
 OVN_Networking_for_KVM.md
 .DS_Store
+netplan-after-del-ovs.png
+ovs-and-ovn-setup.md
+teardown.md
