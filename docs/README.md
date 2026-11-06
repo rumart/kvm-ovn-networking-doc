@@ -12,9 +12,11 @@ A concise, illustrated field guide for operators who know virtualization better 
 
 > **What this book does:** Builds the mental model first, then explains switching, routing, VLANs, tunnels, gateways and NAT through one running example.
 
+The content is published at https://rumart.github.io/kvm-ovn-networking-doc/
+
 Edition 1.1 · November 2026 · Generic KVM / libvirt / Open vSwitch / OVN
 
-## Contents
+## Contents <!-- {docsify-ignore} -->
 
 - [00 Before we begin](00-before-we-begin.md)
 - [Physical-to-logical architecture](00a-physical-to-logical-architecture.md)
