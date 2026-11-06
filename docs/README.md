@@ -14,7 +14,7 @@ A concise, illustrated field guide for operators who know virtualization better 
 
 The content is published at https://rumart.github.io/kvm-ovn-networking-doc/
 
-Edition 1.1 · November 2026 · Generic KVM / libvirt / Open vSwitch / OVN
+Edition 1.4 · November 2026 · Generic KVM / libvirt / Open vSwitch / OVN
 
 ## Contents <!-- {docsify-ignore} -->
 

@@ -14,3 +14,4 @@
 - [11 A compact lab recipe](11-a-compact-lab-recipe.md)
 - [12 Glossary](12-glossary.md)
 - [13 Sources and next steps](13-sources-and-next-steps.md)
+- [Physical to logical architecture](00a-physical-to-logical-architecture.md)
