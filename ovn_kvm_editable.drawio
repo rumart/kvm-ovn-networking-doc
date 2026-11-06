@@ -128,7 +128,7 @@
           <mxGeometry height="24" width="70" x="230" y="646" as="geometry" />
         </mxCell>
         <mxCell id="48" parent="1" style="rounded=1;arcSize=9;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#008348;strokeWidth=1.3;fontSize=10;fontFamily=Helvetica;fontColor=#10243f;" value="vnet0-vm2" vertex="1">
-          <mxGeometry height="24" width="70" x="690" y="646" as="geometry" />
+          <mxGeometry height="24" width="70" x="730" y="646" as="geometry" />
         </mxCell>
         <mxCell id="49" parent="1" style="rounded=1;arcSize=9;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#008348;strokeWidth=1.3;fontSize=10;fontFamily=Helvetica;fontColor=#10243f;" value="vnet1-vm3" vertex="1">
           <mxGeometry height="24" width="70" x="1007" y="647" as="geometry" />
@@ -213,7 +213,7 @@
         <mxCell id="77" edge="1" parent="1" source="ypdBijVNIJ1D2y0I_GY--130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#008348;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="48">
           <mxGeometry relative="1" x="0.6825" as="geometry" />
         </mxCell>
-        <mxCell id="78" edge="1" parent="1" source="48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#008348;strokeWidth=2;" target="52">
+        <mxCell id="78" edge="1" parent="1" source="48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#008348;strokeWidth=2;entryX=0.467;entryY=0.015;entryDx=0;entryDy=0;entryPerimeter=0;" target="52">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="79" edge="1" parent="1" source="ypdBijVNIJ1D2y0I_GY--131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#008348;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="49">
@@ -246,8 +246,8 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="340" y="738" />
-              <mxPoint x="340" y="648" />
-              <mxPoint x="640" y="648" />
+              <mxPoint x="340" y="690" />
+              <mxPoint x="640" y="690" />
               <mxPoint x="640" y="738" />
             </Array>
           </mxGeometry>
@@ -460,7 +460,7 @@
           <mxGeometry height="25" width="100" x="660" y="284" as="geometry" />
         </mxCell>
         <mxCell id="ypdBijVNIJ1D2y0I_GY--142" connectable="0" parent="1" style="group" value="" vertex="1">
-          <mxGeometry height="49" width="241" x="392" y="612" as="geometry" />
+          <mxGeometry height="49" width="241" x="376" y="652" as="geometry" />
         </mxCell>
         <mxCell id="93" parent="ypdBijVNIJ1D2y0I_GY--142" style="rounded=1;arcSize=9;whiteSpace=wrap;html=1;fillColor=#e5f5ff;strokeColor=#0786ac;strokeWidth=1.3;fontSize=10;fontFamily=Helvetica;fontColor=#10243f;" value="Geneve tunnel · br-int ↔ br-int" vertex="1">
           <mxGeometry height="30" width="203" y="19" as="geometry" />
