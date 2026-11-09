@@ -12,6 +12,7 @@
 - [09 What to check when traffic fails](09-what-to-check-when-traffic-fails.md)
 - [10 Five rules to remember](10-five-rules-to-remember.md)
 - [11 A compact lab recipe](11-a-compact-lab-recipe.md)
+- [11a A three-node test plan](11a-a-three-node-test-plan.md)
 - [12 Glossary](12-glossary.md)
 - [13 Sources and next steps](13-sources-and-next-steps.md)
 - [Physical to logical architecture](00a-physical-to-logical-architecture.md)
