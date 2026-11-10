@@ -1,0 +1,44 @@
+switch 8d33d3a4-669d-4430-9d04-b9f3ce924969 (ls-tenB-web)
+    port vm-tenB-22-port
+        addresses: ["02:ac:10:00:01:22 10.10.20.22"]
+    port lsp-web-tenB
+        type: router
+        router-port: lrp-tenB-web
+switch 2a7f1e51-39aa-4ba7-8161-580403fe9d02 (ls-tenA-app)
+    port vm-tenA-11-port
+        addresses: ["02:ac:10:00:00:11 10.10.10.11"]
+    port lsp-app-tenA
+        type: router
+        router-port: lrp-tenA-app
+    port vm-tenA-13-port
+        addresses: ["02:ac:10:00:00:13 10.10.10.13"]
+switch 5e52903d-1871-4af9-a9d3-8e672d0d6641 (ls-tenA-web)
+    port vm-tenA-12-port
+        addresses: ["02:ac:10:00:00:12 10.10.10.12"]
+    port lsp-web-tenA
+        type: router
+        router-port: lrp-tenA-web
+switch 0221bf9b-6669-4f41-8ba0-9f3981f0b88a (ls-tenB-app)
+    port vm-tenB-24-port
+        addresses: ["02:ac:10:00:01:24 10.10.20.24"]
+    port vm-tenB-21-port
+        addresses: ["02:ac:10:00:01:21 10.10.20.21"]
+    port lsp-app-tenB
+        type: router
+        router-port: lrp-tenB-app
+    port vm-tenB-23-port
+        addresses: ["02:ac:10:00:01:23 10.10.20.23"]
+router 4cb29db9-3793-422e-ba5b-c8908293995e (lr-tenB)
+    port lrp-tenB-app
+        mac: "02:ac:ff:00:01:01"
+        networks: ["10.10.20.1/24"]
+    port lrp-tenB-web
+        mac: "02:ac:ff:00:01:02"
+        networks: ["10.10.21.1/24"]
+router b946216a-f5ed-4f8c-8ab2-be71b7b96d09 (lr-tenA)
+    port lrp-tenA-web
+        mac: "02:ac:ff:00:00:02"
+        networks: ["10.10.11.1/24"]
+    port lrp-tenA-app
+        mac: "02:ac:ff:00:00:01"
+        networks: ["10.10.10.1/24"]

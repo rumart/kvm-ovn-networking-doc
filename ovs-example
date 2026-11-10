@@ -1,0 +1,18 @@
+1d7bf947-fc71-47d2-861d-afba782ef38d
+    Bridge br-phys
+        Port enx00e04ce42468
+            Interface enx00e04ce42468
+        Port br-phys
+            Interface br-phys
+                type: internal
+    Bridge br-int
+        fail_mode: secure
+        datapath_type: system
+        Port ovn-kvm-12-0
+            Interface ovn-kvm-12-0
+                type: geneve
+                options: {csum="true", key=flow, remote_ip="192.168.131.112"}
+        Port br-int
+            Interface br-int
+                type: internal
+    ovs_version: "3.3.9"
