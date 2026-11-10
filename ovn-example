@@ -1,6 +1,19 @@
+switch 8c9a2ee8-3231-4b4c-a648-6d3017fda2d2 (ls-external)
+    port lsp-external-provider
+        type: localnet
+        tag: 132
+        addresses: ["unknown"]
+    port lsp-tenB-external
+        type: router
+        addresses: ["00:00:00:00:00:04"]
+        router-port: lrp-tenB-external
+    port lsp-tenA-external
+        type: router
+        addresses: ["00:00:00:00:00:03"]
+        router-port: lrp-tenA-external
 switch 8d33d3a4-669d-4430-9d04-b9f3ce924969 (ls-tenB-web)
     port vm-tenB-22-port
-        addresses: ["02:ac:10:00:01:22 10.10.20.22"]
+        addresses: ["02:ac:10:00:01:22 10.10.21.22"]
     port lsp-web-tenB
         type: router
         router-port: lrp-tenB-web
@@ -14,7 +27,7 @@ switch 2a7f1e51-39aa-4ba7-8161-580403fe9d02 (ls-tenA-app)
         addresses: ["02:ac:10:00:00:13 10.10.10.13"]
 switch 5e52903d-1871-4af9-a9d3-8e672d0d6641 (ls-tenA-web)
     port vm-tenA-12-port
-        addresses: ["02:ac:10:00:00:12 10.10.10.12"]
+        addresses: ["02:ac:10:00:00:12 10.10.11.12"]
     port lsp-web-tenA
         type: router
         router-port: lrp-tenA-web
@@ -29,16 +42,40 @@ switch 0221bf9b-6669-4f41-8ba0-9f3981f0b88a (ls-tenB-app)
     port vm-tenB-23-port
         addresses: ["02:ac:10:00:01:23 10.10.20.23"]
 router 4cb29db9-3793-422e-ba5b-c8908293995e (lr-tenB)
+    port lrp-tenB-external
+        mac: "00:00:00:00:00:04"
+        networks: ["192.168.132.51/24"]
+        gateway chassis: [kvm-11]
     port lrp-tenB-app
         mac: "02:ac:ff:00:01:01"
         networks: ["10.10.20.1/24"]
     port lrp-tenB-web
         mac: "02:ac:ff:00:01:02"
         networks: ["10.10.21.1/24"]
+    nat 114539a0-f284-4f51-823a-6f3039345216
+        external ip: "192.168.132.51"
+        logical ip: "10.10.21.0/24"
+        type: "snat"
+    nat a259f101-5d33-4ef6-adb2-d1d1553d74b9
+        external ip: "192.168.132.51"
+        logical ip: "10.10.20.0/24"
+        type: "snat"
 router b946216a-f5ed-4f8c-8ab2-be71b7b96d09 (lr-tenA)
     port lrp-tenA-web
         mac: "02:ac:ff:00:00:02"
         networks: ["10.10.11.1/24"]
+    port lrp-tenA-external
+        mac: "00:00:00:00:00:03"
+        networks: ["192.168.132.50/24"]
+        gateway chassis: [kvm-11]
     port lrp-tenA-app
         mac: "02:ac:ff:00:00:01"
         networks: ["10.10.10.1/24"]
+    nat 61f4f5f3-e434-43e6-8b4e-db63718795f8
+        external ip: "192.168.132.50"
+        logical ip: "10.10.10.0/24"
+        type: "snat"
+    nat 9652a76e-b2f1-4924-9731-d36792033b5b
+        external ip: "192.168.132.50"
+        logical ip: "10.10.11.0/24"
+        type: "snat"
