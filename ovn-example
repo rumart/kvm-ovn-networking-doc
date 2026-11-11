@@ -12,36 +12,46 @@ switch 8c9a2ee8-3231-4b4c-a648-6d3017fda2d2 (ls-external)
         addresses: ["00:00:00:00:00:03"]
         router-port: lrp-tenA-external
 switch 8d33d3a4-669d-4430-9d04-b9f3ce924969 (ls-tenB-web)
-    port vm-tenB-22-port
-        addresses: ["02:ac:10:00:01:22 10.10.21.22"]
+    port cdd8d5de-9cd9-48dc-b150-69d6131dd4ab
+        addresses: ["02:ac:10:00:01:21 10.10.20.21"]
+    port 4a201726-521d-4de7-8e10-6f986fc5cd05
+        addresses: ["02:ac:10:00:01:24 10.10.20.24"]
     port lsp-web-tenB
         type: router
         router-port: lrp-tenB-web
 switch 2a7f1e51-39aa-4ba7-8161-580403fe9d02 (ls-tenA-app)
-    port vm-tenA-11-port
-        addresses: ["02:ac:10:00:00:11 10.10.10.11"]
+    port d54bd235-e15f-4b9d-ae39-302b0fc9fa87
+        addresses: ["02:ac:10:00:00:13 10.10.10.13"]
+    port 9643ccd6-a643-4a4a-93d4-e29e27e615e2
+        addresses: ["02:ac:10:00:00:11 10.10.10.11/24"]
     port lsp-app-tenA
         type: router
         router-port: lrp-tenA-app
-    port vm-tenA-13-port
-        addresses: ["02:ac:10:00:00:13 10.10.10.13"]
+switch a9543695-43d5-49ae-9a4a-b4c48212a722 (ls-transit)
+    port lsp-transit-tenB
+        type: router
+        router-port: lrp-tenB-transit
+    port lsp-transit-tenA
+        type: router
+        router-port: lrp-tenA-transit
 switch 5e52903d-1871-4af9-a9d3-8e672d0d6641 (ls-tenA-web)
-    port vm-tenA-12-port
+    port 38e4cf67-55b0-48a9-ad33-44d4e80ca7e7
         addresses: ["02:ac:10:00:00:12 10.10.11.12"]
     port lsp-web-tenA
         type: router
         router-port: lrp-tenA-web
 switch 0221bf9b-6669-4f41-8ba0-9f3981f0b88a (ls-tenB-app)
-    port vm-tenB-24-port
-        addresses: ["02:ac:10:00:01:24 10.10.20.24"]
-    port vm-tenB-21-port
-        addresses: ["02:ac:10:00:01:21 10.10.20.21"]
+    port 4af1a149-e41d-49f1-8c5b-da90ea61c7b5
+        addresses: ["02:ac:10:00:01:23 10.10.20.23"]
+    port 04724f0e-c89d-4294-96e4-66107f111952
+        addresses: ["02:ac:10:00:01:22 10.10.20.22"]
     port lsp-app-tenB
         type: router
         router-port: lrp-tenB-app
-    port vm-tenB-23-port
-        addresses: ["02:ac:10:00:01:23 10.10.20.23"]
 router 4cb29db9-3793-422e-ba5b-c8908293995e (lr-tenB)
+    port lrp-tenB-transit
+        mac: "02:ac:ff:00:01:fe"
+        networks: ["100.64.0.2/29"]
     port lrp-tenB-external
         mac: "00:00:00:00:00:04"
         networks: ["192.168.132.51/24"]
@@ -71,6 +81,9 @@ router b946216a-f5ed-4f8c-8ab2-be71b7b96d09 (lr-tenA)
     port lrp-tenA-app
         mac: "02:ac:ff:00:00:01"
         networks: ["10.10.10.1/24"]
+    port lrp-tenA-transit
+        mac: "02:ac:ff:00:00:fe"
+        networks: ["100.64.0.1/29"]
     nat 61f4f5f3-e434-43e6-8b4e-db63718795f8
         external ip: "192.168.132.50"
         logical ip: "10.10.10.0/24"
